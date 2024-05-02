@@ -1,1 +1,39 @@
-<p>book-page works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-lg-9">
+            <h1>Libros Disponibles en colección personal</h1>
+            <div class="row">
+                <div *ngFor="let book of books" class="col-4 m-2">
+                    <app-card [book]="book"></app-card>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-lg-3 mt-5">
+            <button type="button" class="btn btn-lg btn-info text-white p-2 text-uppercase" data-bs-toggle="modal" data-bs-target="#exampleModal"><span class="material-symbols-outlined">
+                add
+            </span>Agregar un nuevo libro</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+
